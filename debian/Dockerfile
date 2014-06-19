@@ -26,4 +26,6 @@ EXPOSE 8082
 EXPOSE 8083
 
 
-CMD ["service", "structr-ui", "start"]
+RUN service structr-ui start
+
+CMD["bash"]
