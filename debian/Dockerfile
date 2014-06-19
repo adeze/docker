@@ -1,8 +1,8 @@
 FROM debian:latest
 MAINTAINER Adam Ezekiel <adeze1@gmail.com>
 #ENV DEBIAN_FRONTEND noninteractive
-#ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
-#ENV PATH $JAVA_HOME/bin:$PATH
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+ENV PATH $JAVA_HOME/bin:$PATH
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y ca-certificates cron inotify-tools nano pwgen supervisor tmux wget curl
@@ -26,4 +26,4 @@ EXPOSE 8082
 EXPOSE 8083
 
 
-CMD service structr-ui start
+CMD ["service", "structr-ui", "start"]
