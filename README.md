@@ -1,4 +1,2 @@
-docker-structr
+docker
 ==============
-
-Dockerised Deployment of Structr CMS
