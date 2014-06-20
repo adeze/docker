@@ -76,5 +76,12 @@ ENV KEYSTORE_PASSWORD somethingelse
 #RUN sed -i -e "s/^datadir.*=.*/datadir = \/data/" /usr/lib/structr-ui/structr.conf
 #RUN sed -i -e "s/^innodb_buffer_pool_size.*=.*/innodb_buffer_pool_size = 64M/" /usr/lib/structr-ui/structr.conf
 
+#or compile it perhaps?
+#RUN git clone https://github.com/structr/structr.git
+#RUN cd structr
+#RUN mvn clean install -DskipTests
+#RUN cd structr-ui
+#RUN mvn exec:exec
+
 
 CMD ["/bin/bash"]
